@@ -3,6 +3,7 @@ import matplotlib.pyplot as pt
 import pandas as pd
 import cv2
 
+#hello SOham
 # Importing the dataset
 dataset = pd.read_csv('train.csv')
 X_train = dataset.iloc[:21000, 1:].values
