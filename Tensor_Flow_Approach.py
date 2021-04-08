@@ -6,8 +6,8 @@ from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten
 from keras.layers import Conv2D, MaxPool2D
 
-train_data= pd.read_csv(r"D:\trendzlink_internship\Handwriting-Recognition\train.csv")
-X_test= pd.read_csv(r"D:\trendzlink_internship\Handwriting-Recognition\test.csv")
+train_data= pd.read_csv(r"train.csv")
+X_test= pd.read_csv(r"test.csv")
 train_data.shape, X_test.shape
 
 y_train= train_data['label'].values
@@ -54,7 +54,7 @@ history = model.fit(
 
 
 import cv2
-img = cv2.imread(r'D:\trendzlink_internship\Handwriting-Recognition\img.png')
+img = cv2.imread(r'img.png')
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 img_arr = np.array(gray)
 #print(img_arr)
